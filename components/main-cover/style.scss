@@ -1,0 +1,60 @@
+.FruitList {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: .5rem auto;
+  background: #231422;
+  color: white;
+  margin: 0;
+  padding-top: 5rem;
+  background-image: url('./static/images/background/3.jpg');
+  background-size: cover;
+}
+
+.FruitList__title {
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+  margin-top: -4rem;
+}
+
+.FruitList__title h1 {
+  font-size: 5rem;
+}
+
+.FruitList__title--button .action {
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  border: 2px solid white;
+}
+
+.FruitList__image {
+  display: inline-block;
+  width: 40%;
+  vertical-align: middle;  
+}
+
+.FruitList__image img {
+  display: inline-block;
+  max-width: 70%;
+}
+
+
+
+@media (max-width: 680px) {
+  .FruitList__title {
+    display: block;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .FruitList__image {
+    display: block;
+    width: 100%;
+  }
+}

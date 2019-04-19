@@ -1,0 +1,42 @@
+import React from 'react'
+import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
+import Breadcrumbs from '../components/common/Breadcrumbs';
+import Orders from '../components/common/Orders';
+import Document, {Head, Main, NextScript} from 'next/document'
+import stylesheet from '../styles/main.scss';
+
+export default class BaseLayout extends Document {
+  render() {
+    return (
+      <html>
+      <Head>
+        <meta charSet="utf-8"/>
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+        <title>Titulo</title>
+        <meta property="og:title" content="Titulo"/>
+        <meta property="og:description" content="description"/>
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet"/>
+        <style dangerouslySetInnerHTML={{__html: stylesheet}}/>
+      </Head>
+      <body>
+      <div className="container-fluid">
+        <Header/>
+        <Breadcrumbs/>
+        <div className="content-r home-page">
+          <div className="row">
+            <Main/>
+            <div className="col-md-4 col-lg-3">
+              <Orders/>
+            </div>
+          </div>
+        </div>
+        <Footer/>
+      </div>
+      <NextScript/>
+      </body>
+      </html>
+    )
+  }
+}

@@ -1,0 +1,26 @@
+
+.fruit-item {
+  background: white;
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin: .5rem;
+}
+
+.fruit-item img {
+  display: inline-block;
+  max-width: 50%;
+  padding-bottom: 2rem;
+}
+
+.fruit-item .button {
+  background: orange;
+  width: 80%;
+  padding: .3rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}

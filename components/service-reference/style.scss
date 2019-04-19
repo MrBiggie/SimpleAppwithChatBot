@@ -1,0 +1,79 @@
+.ServiceReference {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: .5rem auto;
+  background: white;
+  color: black;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.ServiceReference__items {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.ServiceReference__item {
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.ServiceReference__item--header {
+}
+
+.ServiceReference__item--header figure {
+  display: block;
+  width: 60px;
+  vertical-align: middle; 
+  margin: 0 auto;
+}
+
+.ServiceReference__item--header img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.ServiceReference__item--header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 100;
+}
+
+.ServiceReference__item--description {
+  padding-top: .7rem;
+}
+
+.ServiceReference__item--description h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.ServiceReference__item--description p {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 100;
+}
+
+.ServiceReference__title--button .action {
+  width: 150px;
+  text-align: center;
+  margin: 0 auto;
+  padding: .8rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 2px solid purple;
+  color: purple;
+}
+
+@media (max-width: 680px) {
+  .ServiceReference__item {
+    display: block;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+}
