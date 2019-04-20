@@ -10,14 +10,11 @@ class MainCover extends React.Component {
         <style dangerouslySetInnerHTML={{__html: stylesheet}}/>
         <div className="FruitList__title">
           <div className="FruitList__title--h1">
-            <h1>HELLO.</h1>
+            <h1>HELLO</h1>
           </div>
-          <div className="FruitList__title--button">
-            <div className="action">TRY</div>
+          <div className="FruitList__title--h1">
+            <h2>Student Service Center</h2>
           </div>
-        </div>
-        <div className="FruitList__image">
-          <img src="./static/images/Apple-iPhone-8.png"></img>
         </div>
       </div>
     )

@@ -5,7 +5,8 @@ const glob = require('glob');
 module.exports = {
   webpack: (config, {dev}) => {
 
-    config.node = {
+
+      config.node = {
       fs: 'empty',
       net: 'empty',
       tls: 'empty'
@@ -47,7 +48,8 @@ module.exports = {
           }
         ]
       }, {
-        test: /\.(png|jpe?g|gif)(\?.*)?$/,
+        // test: /\.(png|jpe?g|gif)(\?.*)?$/,
+        test: /\.(jpg|jpeg|png|gif|tiff|ico|svg|eot|otf|ttf|woff|woff2|mp3)$/i,
         loader: 'file-loader',
         options: {
           name: 'static/images/[name].[hash:8].[ext]'
@@ -101,6 +103,7 @@ module.exports = {
           name: 'static/fonts/[name].[hash:8].[ext]'
         }
       }
+
     );
     return config
   }

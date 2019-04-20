@@ -16,13 +16,12 @@ class ServiceReference extends React.Component {
                 <img src="./static/images/trophy-256.ico"></img>
               </figure>
               <div>
-                <h2>QUALITY</h2>
+                <h2>Know Exam Release Date</h2>
               </div>
             </div>
-            <div className="ServiceReference__item--description">
+            {/* <div className="ServiceReference__item--description">
               <h2>1ST.</h2>
-              <p>Best product</p>
-            </div>
+            </div> */}
           </article>
 
           <article className="ServiceReference__item">
@@ -31,13 +30,12 @@ class ServiceReference extends React.Component {
                 <img src="./static/images/truck-2-xxl.png"></img>
               </figure>
               <div>
-                <h2>SHIPPING</h2>
+                <h2>Know Assignment Due</h2>
               </div>
             </div>
-            <div className="ServiceReference__item--description">
-              <h2>0USD</h2>
+            {/* <div className="ServiceReference__item--description">
               <p>Absolute free</p>
-            </div>
+            </div> */}
           </article>
 
           <article className="ServiceReference__item">
@@ -46,13 +44,13 @@ class ServiceReference extends React.Component {
                 <img src="./static/images/online-support-xxl.png"></img>
               </figure>
               <div>
-                <h2>SUPPORT</h2>
+                <h2>Study Plan Consultation</h2>
               </div>
             </div>
-            <div className="ServiceReference__item--description">
+            {/* <div className="ServiceReference__item--description">
               <h2>24H</h2>
               <p>With you</p>
-            </div>
+            </div> */}
           </article>
 
         </div>
