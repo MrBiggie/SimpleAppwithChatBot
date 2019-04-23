@@ -39,7 +39,6 @@ class SampleProduct extends React.Component {
             .then((data) => {
 
                 var flag = data.entities;
-                alert(JSON.stringify(flag));
                 if(JSON.stringify(flag) == "{}"){
                     this.setState({answer: "Sorry, we don't have an answer to that question"});
                 }else {
