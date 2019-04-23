@@ -45,7 +45,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _jsxFileName = '/Users/edric.dang/Desktop/SimpleAppwithChatBot/components/sample-product/index.js';
 
 
-var MY_TOKEN = "NDHT5JOO2IKK4TAB3MFDEVRIBCA7M3RG";
+var MY_TOKEN = "4ECVKBPXXPYHIY7UAZZCRP64YE7RVQYJ";
 
 var _require = require('node-wit'),
     Wit = _require.Wit,
@@ -90,8 +90,19 @@ var SampleProduct = function (_React$Component) {
             var query = this.state.value;
 
             client.message(query, {}).then(function (data) {
-                response = (0, _stringify2.default)(data.entities.Intent[VALUE].value);
-                _this2.setState({ answer: response });
+
+                var flag = data.entities;
+                alert((0, _stringify2.default)(flag));
+                if ((0, _stringify2.default)(flag) == "{}") {
+                    _this2.setState({ answer: "Sorry, we don't have an answer to that question" });
+                } else {
+                    response = (0, _stringify2.default)(flag.intent[VALUE].value);
+                    if (response == "") {
+                        _this2.setState({ answer: "Sorry, we don't have an answer to that question" });
+                    } else {
+                        _this2.setState({ answer: response });
+                    }
+                }
             }).catch(console.error);
 
             event.preventDefault();
@@ -103,7 +114,7 @@ var SampleProduct = function (_React$Component) {
             alert('A name was submitted: ' + response);
             return _react2.default.createElement('input', { type: 'text', value: response, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 51
+                    lineNumber: 63
                 }
             });
         }
@@ -119,76 +130,76 @@ var SampleProduct = function (_React$Component) {
 
             return _react2.default.createElement('div', { className: 'SampleProduct', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 63
+                    lineNumber: 75
                 }
             }, _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: _style2.default }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 64
+                    lineNumber: 76
                 }
             }), _react2.default.createElement('div', { className: 'SampleProduct__title', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 65
+                    lineNumber: 77
                 }
             }, _react2.default.createElement('div', { className: 'SampleProduct__title--h1', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 66
+                    lineNumber: 78
                 }
             }, _react2.default.createElement('h2', {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 67
+                    lineNumber: 79
                 }
             }, 'TRY OUR'), _react2.default.createElement('h3', {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 68
+                    lineNumber: 80
                 }
             }, _react2.default.createElement('p', { className: 'SampleProduct__part1', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 68
+                    lineNumber: 80
                 }
             }, 'SERVICE'), _react2.default.createElement('p', { className: 'SampleProduct__part2', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 68
+                    lineNumber: 80
                 }
             }, 'NOW'))), _react2.default.createElement('div', { className: 'SampleProduct__title--dash', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 71
+                    lineNumber: 83
                 }
             }), _react2.default.createElement('div', { className: 'SampleProduct__title--button', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 73
+                    lineNumber: 85
                 }
             }, _react2.default.createElement('div', {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 74
+                    lineNumber: 86
                 }
             }, _react2.default.createElement('p', {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 75
+                    lineNumber: 87
                 }
             }, 'Enter your query and submit. You Will get the suggestion.')))), _react2.default.createElement('form', { onSubmit: this.handleSubmit, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 83
+                    lineNumber: 95
                 }
             }, _react2.default.createElement('label', {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 84
+                    lineNumber: 96
                 }
             }, 'Query:', _react2.default.createElement('input', { className: 'SampleProduct__title', type: 'text', value: this.state.value, onChange: this.handleChange, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 86
+                    lineNumber: 98
                 }
             })), _react2.default.createElement('button', { className: 'action', type: 'submit', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 89
+                    lineNumber: 101
                 }
             }, ' Submit')), _react2.default.createElement('label', { className: 'SampleProduct__part1', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 92
+                    lineNumber: 104
                 }
             }, this.state.answer));
         }

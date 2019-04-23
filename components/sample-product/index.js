@@ -3,7 +3,7 @@ import stylesheet from './style.scss'
 import MyChat from "./chat";
 
 
-const MY_TOKEN = "NDHT5JOO2IKK4TAB3MFDEVRIBCA7M3RG";
+const MY_TOKEN = "4ECVKBPXXPYHIY7UAZZCRP64YE7RVQYJ";
 const {Wit, log} = require('node-wit');
 
 const client = new Wit({accessToken: MY_TOKEN});
@@ -34,10 +34,22 @@ class SampleProduct extends React.Component {
     handleSubmit(event) {
         var query = this.state.value
 
+
         client.message(query, {})
             .then((data) => {
-                response = JSON.stringify(data.entities.Intent[VALUE].value);
-                this.setState({answer: response});
+
+                var flag = data.entities;
+                alert(JSON.stringify(flag));
+                if(JSON.stringify(flag) == "{}"){
+                    this.setState({answer: "Sorry, we don't have an answer to that question"});
+                }else {
+                    response = JSON.stringify(flag.intent[VALUE].value);
+                    if (response == "") {
+                        this.setState({answer: "Sorry, we don't have an answer to that question"});
+                    } else {
+                        this.setState({answer: response});
+                    }
+                }
             })
             .catch(console.error);
 
